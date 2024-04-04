@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"os"
 )
 
 
@@ -29,6 +30,7 @@ func main(){
 	fmt.Printf("$%.2f\n",ebt)
 	fmt.Printf("$%.2f\n",profit)
 	fmt.Printf("%.2f\n",ratio)
+	writeToFile(ebt, profit, ratio)
 }
 
 func promptUser(text string)(float64, error){
@@ -46,4 +48,9 @@ func calculate(revenue, expenses, taxRate float64) (ebt float64, profit float64,
 	profit = ebt * (1  -taxRate / 100)
 	ratio = ebt / profit
 	return ebt, profit, ratio
+}
+
+func writeToFile(ebt, profit, ratio float64){
+	toFileText := fmt.Sprintf("EBT: %.1f\nProfit: %.1f\nRatio: %.3f\n", ebt, profit, ratio)
+	os.WriteFile(toFileText, []byte(toFileText), 0644)
 }

@@ -29,18 +29,15 @@ func main(){
 	fmt.Printf("$%.2f\n",ebt)
 	fmt.Printf("$%.2f\n",profit)
 	fmt.Printf("%.2f\n",ratio)
-
 }
 
 func promptUser(text string)(float64, error){
 	var output float64
 	fmt.Print(text)
 	fmt.Scan(&output)
-	
 	if output <= 0 {
-		return 0, errors.New("Value must be a positive number.")
+		return 0, errors.New("value must be a positive number")
 	}
-
 	return output, nil
 }
 

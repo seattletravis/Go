@@ -52,5 +52,5 @@ func calculate(revenue, expenses, taxRate float64) (ebt float64, profit float64,
 
 func writeToFile(ebt, profit, ratio float64){
 	toFileText := fmt.Sprintf("EBT: %.1f\nProfit: %.1f\nRatio: %.3f\n", ebt, profit, ratio)
-	os.WriteFile(toFileText, []byte(toFileText), 0644)
+	os.WriteFile("results.txt", []byte(toFileText), 0644)
 }

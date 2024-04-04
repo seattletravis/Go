@@ -1,13 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 
 func main(){
 
-	revenue := promptUser("Enter revenue: ")
-	expenses := promptUser("Enter expenses: ")
-	taxRate := promptUser("Enter tax rate: ")
+	revenue, err1 := promptUser("Enter revenue: ")
+	if err1 != nil {
+		fmt.Println(err1)
+		return
+	}
+	expenses, err2 := promptUser("Enter expenses: ")
+	if err2 != nil {
+		fmt.Println(err2)
+		return
+	}
+	taxRate, err3 := promptUser("Enter tax rate: ")
+	if err3 != nil {
+		fmt.Println(err3)
+		return
+	}
 
 	ebt, profit, ratio := calculate(revenue, expenses, taxRate)
 
@@ -17,11 +32,16 @@ func main(){
 
 }
 
-func promptUser(text string)(float64){
+func promptUser(text string)(float64, error){
 	var output float64
 	fmt.Print(text)
 	fmt.Scan(&output)
-	return output
+	
+	if output <= 0 {
+		return 0, errors.New("Value must be a positive number.")
+	}
+
+	return output, nil
 }
 
 func calculate(revenue, expenses, taxRate float64) (ebt float64, profit float64, ratio float64){

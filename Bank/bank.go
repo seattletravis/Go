@@ -26,9 +26,9 @@ func getFloatFromFile(fileName string) (float64, error) {
 	return value, nil
 }
 
-func writeFloatToFile(value float64){
+func writeFloatToFile(value float64, fileName string){
 	valueText := fmt.Sprint(value)
-	os.WriteFile(accountBalanceFile, []byte(valueText), 0644)
+	os.WriteFile(fileName, []byte(valueText), 0644)
 }
 
 func main(){
@@ -65,7 +65,7 @@ func main(){
 			} 
 			accountBalance += depositAmount
 			fmt.Println("Balance updated! New balance:", accountBalance)
-			writeBalanceToFile(accountBalance)
+			writeFloatToFile(accountBalance, accountBalanceFile)
 				
 			case 3:
 				fmt.Println("Withdraw amount: ")
@@ -78,7 +78,7 @@ func main(){
 				}
 				accountBalance -= withdrawAmount
 				fmt.Println("Balance updated! New balance:", accountBalance)
-				writeBalanceToFile(accountBalance)
+				writeFloatToFile(accountBalance, accountBalanceFile)
 			default:
 				fmt.Println("Goodbye!")
 				fmt.Println("Thanks for banking with us today!")

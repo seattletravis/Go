@@ -9,21 +9,21 @@ import (
  
 const accountBalanceFile = "balance.txt"
 
-func getBalanceFromFile() (float64, error) {
-	data, err := os.ReadFile(accountBalanceFile)
+func getFloatFromFile(fileName string) (float64, error) {
+	data, err := os.ReadFile(fileName)
 
 	if err != nil {
-		return 1000, errors.New("Failed to find balance file") 
+		return 1000, errors.New("failed to find file") 
 	}
 
-	balanceText := string(data)
-	balance, err := strconv.ParseFloat(balanceText, 64)
+	valueText := string(data)
+	value, err := strconv.ParseFloat(valueText, 64)
 
 	if err != nil {
-		return 1000, errors.New("Failed to parse stored balance value")
+		return 1000, errors.New("failed to parse stored value")
 	}
 
-	return balance, nil
+	return value, nil
 }
 
 func writeBalanceToFile(balance float64){
@@ -32,7 +32,7 @@ func writeBalanceToFile(balance float64){
 }
 
 func main(){
-	var accountBalance, err = getBalanceFromFile()
+	var accountBalance, err = getFloatFromFile(accountBalanceFile)
 
 	if err != nil {
 		fmt.Println("ERROR")
@@ -44,12 +44,7 @@ func main(){
 	
 	for {
 
-		fmt.Println("What do you want to do?")
-		fmt.Println("1. Check balance")
-		fmt.Println("2. Deposit money")
-		fmt.Println("3. Withdraw money")
-		fmt.Println("4. Exit")
-
+		presentOptions()
 		var choice int
 		fmt.Print("Your choice is: ")
 		fmt.Scan(&choice)
@@ -91,3 +86,4 @@ func main(){
 			}
 		}	
 }
+

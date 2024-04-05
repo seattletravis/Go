@@ -26,9 +26,9 @@ func getFloatFromFile(fileName string) (float64, error) {
 	return value, nil
 }
 
-func writeBalanceToFile(balance float64){
-	balanceText := fmt.Sprint(balance)
-	os.WriteFile(accountBalanceFile, []byte(balanceText), 0644)
+func writeFloatToFile(value float64){
+	valueText := fmt.Sprint(value)
+	os.WriteFile(accountBalanceFile, []byte(valueText), 0644)
 }
 
 func main(){

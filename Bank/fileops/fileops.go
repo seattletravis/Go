@@ -1,13 +1,11 @@
 package fileops
 
 import (
-	"os"
-	"fmt"
-	"strconv"
 	"errors"
+	"fmt"
+	"os"
+	"strconv"
 )
-
-
 
 func GetFloatFromFile(fileName string) (float64, error) {
 	data, err := os.ReadFile(fileName)

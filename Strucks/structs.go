@@ -5,10 +5,11 @@ import "fmt"
 func main() {
 	firstName := getUserData("Please enter your first name: ")
 	lastName := getUserData("Please enter your last name: ")
-	birthDate := getUserData("Please enter your birthdate {MM/DD/YYYY}: ")
+	birthdate := getUserData("Please enter your birthdate {MM/DD/YYYY}: ")
 
+	// ... Do something with structs!
 
-	fmt.Println(firstName,lastName, birthDate)
+	fmt.Println(firstName,lastName, birthdate)
 }
 
 func getUserData(promptText string) string {

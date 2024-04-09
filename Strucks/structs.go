@@ -9,6 +9,8 @@ func main() {
 
 	// ... Do something with structs!
 
+	outputUserDetails(firstName, lastName, birthdate)
+
 	fmt.Println(firstName,lastName, birthdate)
 }
 
@@ -22,4 +24,3 @@ func getUserData(promptText string) string {
 	fmt.Scan(&value)
 	return value
 }
-

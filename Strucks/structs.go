@@ -12,7 +12,7 @@ func main() {
 	fmt.Println(firstName,lastName, birthdate)
 }
 
-func outputUserDetails(){
+func outputUserDetails(firstName, lastName, birthdate string){
 	fmt.Println(firstName, lastName, birthdate)
 }
 

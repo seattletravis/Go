@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-// Define Struct Blueprint
 type user struct {
 	firstName string
 	lastName string
@@ -13,6 +12,11 @@ type user struct {
 	createdAt time.Time
 }
 
+func (u user) outputUserDetails(){
+	// ...
+	
+	fmt.Println(u.firstName, u.lastName, u.birthDate)
+}
 
 func main() {
 	userFirstName := getUserData("Please enter your first name: ")
@@ -26,13 +30,13 @@ func main() {
 		createdAt: time.Now(),
 	}
 	
-	outputUserDetails(&appUser)
+	appUser.outputUserDetails()
 
 }
 
-func outputUserDetails(u *user){
-	fmt.Println(u.firstName, u.lastName, u.birthDate)
-}
+// func outputUserDetails(u *user){
+// 	fmt.Println(u.firstName, u.lastName, u.birthDate)
+// }
 
 func getUserData(promptText string) string {
 	fmt.Print(promptText)

@@ -11,7 +11,6 @@ func main() {
 
 	outputUserDetails(firstName, lastName, birthdate)
 
-	fmt.Println(firstName,lastName, birthdate)
 }
 
 func outputUserDetails(firstName, lastName, birthdate string){

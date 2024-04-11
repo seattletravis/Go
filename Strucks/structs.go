@@ -26,7 +26,7 @@ func (u *user) clearUserName(){
 
 func newUser(firstName, lastName, birthDate string) (*user, error) {
 	if firstName == "" || lastName == "" || birthDate == "" {
-		return nil, errors.New("first and last name and birthdate required")
+		return nil, errors.New("first name last name and birthdate required")
 	}
 
 	return &user{

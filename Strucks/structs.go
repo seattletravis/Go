@@ -27,10 +27,6 @@ func main() {
 	appUser.OutputUserDetails()
 }
 
-// func outputUserDetails(u *user){
-// 	fmt.Println(u.firstName, u.lastName, u.birthDate)
-// }
-
 func getUserData(promptText string) string {
 	fmt.Print(promptText)
 	var value string

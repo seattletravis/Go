@@ -13,13 +13,13 @@ type User struct {
 	createdAt time.Time
 }
 
-func (u user) outputUserDetails(){
+func (u User) OutputUserDetails(){
 	// ...
 	
 	fmt.Println(u.firstName, u.lastName, u.birthDate)
 }
 
-func (u *user) clearUserName(){
+func (u *User) ClearUserName(){
 	u.firstName = ""
 	u.lastName = ""
 }

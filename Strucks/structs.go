@@ -20,11 +20,11 @@ func main() {
 		return
 	}
 
-	appUser.outputUserDetails()
+	appUser.OutputUserDetails()
 
-	appUser.clearUserName()
+	appUser.ClearUserName()
 
-	appUser.outputUserDetails()
+	appUser.OutputUserDetails()
 }
 
 // func outputUserDetails(u *user){

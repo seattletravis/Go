@@ -6,8 +6,6 @@ import (
 	"example.com/structs/user"
 )
 
-
-
 func main() {
 	userFirstName := getUserData("Please enter your first name: ")
 	userLastName := getUserData("Please enter your last name: ")

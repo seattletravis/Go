@@ -30,6 +30,19 @@ func (u *User) ClearUserName(){
 	u.lastName = ""
 }
 
+func NewAdmin(email, password string) Admin {
+	return Admin{
+		email: email,
+		password: password,
+		User: User{
+			firstName: "ADMIN",
+			lastName: "ADMIN",
+			birthDate: "---",
+			createdAt: time.Now(),
+		}
+	}
+}
+
 func New(firstName, lastName, birthDate string) (*User, error) {
 	if firstName == "" || lastName == "" || birthDate == "" {
 		return nil, errors.New("first name last name and birthdate required")

@@ -11,6 +11,10 @@ type Note struct {
 }
 
 func New(title, content string) Note {
-
+	return Note{
+		title: title,
+		content: content,
+		createdAt: time.Now(),
+	}
 
 } 

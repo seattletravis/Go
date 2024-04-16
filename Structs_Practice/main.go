@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"errors"
+	"example.com/note/note"
 )
 
 func main(){
-	title, content, err := getNoteData()
+	title, content := getNoteData()
 
 	if err != nil {
 		fmt.Println(err)
@@ -17,27 +18,22 @@ func main(){
 
 }
 
-func getNoteData() (string, string, error) {
-	title, err := getUserInput("Note title: ")
-	if err != nil {
-		return "", "", err
-	}
-	content, err := getUserInput("Note content: ")
+func getNoteData() (string, string) {
+	title := getUserInput("Note title: ")
 
-	if err != nil {
-		return "", "", err
-	}
-	return title, content, nil
+	content := getUserInput("Note content: ")
+
+	return title, content
 
 }
 
-func getUserInput(prompt string) (string, error) {
+func getUserInput(prompt string) string {
 	fmt.Print(prompt)
 	var value string
 	fmt.Scanln(&value)
 
 
 
-	return value, nil
+	return value
 
 }

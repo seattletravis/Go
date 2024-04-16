@@ -2,22 +2,21 @@ package main
 
 import (
 	"fmt"
-	"errors"
 	"example.com/note/note"
 )
 
 func main(){
 	title, content := getNoteData()
 
-	userNote, err := note.New(title, content)
+	userNote, err := Note.New(title, content)
 
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	
-	
+	userNote.Display()
+
 }
 
 func getNoteData() (string, string) {

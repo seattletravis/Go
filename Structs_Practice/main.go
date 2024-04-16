@@ -12,7 +12,7 @@ func main(){
 func getUserInput(prompt string) (string, error) {
 	fmt.Print(prompt)
 	var value string
-	fmt.Snanln(&value)
+	fmt.Scanln(&value)
 
 	if value == "" {
 		return "", errors.New("invalid input")

@@ -29,7 +29,7 @@ func (note Note) Save() {
 		return err
 	}
 
-	os.WriteFile(fileName)
+	os.WriteFile(fileName, json, 0644)
 }
 
 func New(title, content string) (Note, error) {

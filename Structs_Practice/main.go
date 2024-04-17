@@ -23,9 +23,9 @@ func main(){
 }
 
 func getNoteData() (string, string) {
-	title := getUserInput("Note title: ")
+	title := getUserInput("Note title:")
 
-	content := getUserInput("Note content: ")
+	content := getUserInput("Note content:")
 
 	return title, content
 

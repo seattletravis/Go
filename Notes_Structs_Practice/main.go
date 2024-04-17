@@ -11,7 +11,7 @@ import (
 
 func main(){
 	title, content := getNoteData()
-
+	todoText := getUserInput("Todo text: ")
 	userNote, err := Note.New(title, content)
 
 	if err != nil {
@@ -41,11 +41,8 @@ func getNoteData() (string, string) {
 
 func getUserInput(prompt string) string {
 	fmt.Printf("%v ", prompt)
-
 	reader := bufio.NewReader(os.Stdin)
-
 	text, err := reader.ReadString('\n')
-
 	if err != nil {
 		return ""
 	}

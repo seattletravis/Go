@@ -1,4 +1,4 @@
-package todo
+package Todo
 
 import (
 	"encoding/json"
@@ -7,12 +7,12 @@ import (
 	"os"
 )
 
-type Note struct {
-	Content string `json:"text"`
+type Todo struct {
+	Text string `json:"text"`
 }
 
 func (todo Todo) Display() {
-	fmt.Printf(todo)
+	fmt.Printf(todo.Text)
 }
 
 func (todo Todo) Save() error {
@@ -32,7 +32,7 @@ func New(content string) (Todo, error) {
 		return Todo{}, errors.New("invalid input")
 	}
 
-	return Note{
+	return Todo{
 		Text: content,
 	}, nil
 } 

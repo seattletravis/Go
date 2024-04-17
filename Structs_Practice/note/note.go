@@ -19,7 +19,7 @@ func (note Note) Display() {
 	fmt.Printf("Your note titled %v has the following content:\n\n%v\n\n", note.title, note.content)
 }
 
-func (note Note) Save() {
+func (note Note) Save() error {
 	fileName := strings.ReplaceAll(note.title, " ", "_")
 	fileName = strings.ToLower(fileName)
 
@@ -29,7 +29,7 @@ func (note Note) Save() {
 		return err
 	}
 
-	os.WriteFile(fileName, json, 0644)
+	return os.WriteFile(fileName, json, 0644)
 }
 
 func New(title, content string) (Note, error) {

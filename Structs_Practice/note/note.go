@@ -23,7 +23,11 @@ func (note Note) Save() {
 	fileName := strings.ReplaceAll(note.title, " ", "_")
 	fileName = strings.ToLower(fileName)
 
-	json := json.Marshal()
+	json, err := json.Marshal(note)
+
+	if err != nil {
+		return err
+	}
 
 	os.WriteFile(fileName)
 }

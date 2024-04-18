@@ -5,9 +5,12 @@ import (
 	"bufio"
 	"os"
 	"strings"
+
 	"example.com/note/note"
 	"example.com/note/todo"
 )
+
+type Saver
 
 func main(){
 	title, content := getNoteData()

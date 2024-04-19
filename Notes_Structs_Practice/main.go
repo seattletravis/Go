@@ -46,13 +46,13 @@ func main(){
 		return
 	}
 
-	outputData(todo)
+	err = outputData(todo)
 
 	if err != nil {
 		return
 	}
 
-	outputData(userNote)
+	err = outputData(userNote)
 
 	if err != nil {
 		return

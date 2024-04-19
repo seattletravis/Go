@@ -59,9 +59,9 @@ func main(){
 	}
 }
 
-func outputData(data outputable){
+func outputData(data outputable) error{
 	data.Display()
-	saveData(data)
+	return saveData(data)
 }
 
 func saveData(data saver) error {

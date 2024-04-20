@@ -60,14 +60,31 @@ printSomething("Hello")
 }
 
 func printSomething(value interface{}){
-	switch value.(type){
-	case int:
-		fmt.Println("Integer:", value)
-	case float64:
-		fmt.Println("Float:", value)
-	case string:
-		fmt.Println(value)
+	intVal, isTypeInt := value.(int)
+	if  isTypeInt {
+		fmt.Println("Integer: ", intVal)
+		return
 	}
+	stringVal, isTypeString := value.(string)
+	if isTypeString {
+		fmt.Println("String: ", stringVal)
+		return
+	}
+	floatVal, isTypeVal := value.(float64)
+	if isTypeVal {
+		fmt.Println("Float: ", floatVal)
+		return
+	}
+
+
+	// switch value.(type){
+	// case int:
+	// 	fmt.Println("Integer:", value)
+	// case float64:
+	// 	fmt.Println("Float:", value)
+	// case string:
+	// 	fmt.Println(value)
+	// }
 }
 
 func outputData(data outputable) error{

@@ -52,11 +52,11 @@ func main(){
 		return
 	}
 
-	err = outputData(userNote)
+	outputData(userNote)
 
-	if err != nil {
-		return
-	}
+
+
+
 }
 
 func outputData(data outputable) error{

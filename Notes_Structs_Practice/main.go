@@ -75,8 +75,6 @@ func printSomething(value interface{}){
 		fmt.Println("Float: ", floatVal)
 		return
 	}
-
-
 	// switch value.(type){
 	// case int:
 	// 	fmt.Println("Integer:", value)

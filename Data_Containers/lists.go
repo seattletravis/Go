@@ -9,6 +9,6 @@ func main(){
 
 	productNames[2] = "A Carpet"
 
-	fmt.Println(prices[2], productNames)
+	fmt.Println(prices, productNames)
 
 }

@@ -6,9 +6,9 @@ func main () {
 	prices := []float64{10.99, 8.99}
 	f.Println(prices[:1])
 
-	prices[2] = 0.99
-	
+	updatePrices := append(prices, 5.99, 4.99)
 
+	f.Println(updatePrices, prices)
 
 }
 

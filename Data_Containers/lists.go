@@ -4,7 +4,7 @@ import f "fmt"
 
 func main () {
 	prices := []float64{10.99, 8.99}
-	f.Println(prices[:1])
+	f.Println(prices)
 
 	prices = append(prices, 5.99, 4.99)
 

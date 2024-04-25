@@ -2,7 +2,11 @@ package main
 
 import f "fmt"
 
-
+type Product struct {
+	title string
+	id string
+	price float64
+}
 
 func main () {
 	var hobbies = [3]string{"landscaping", "cooking", "woodworking"}
@@ -18,6 +22,7 @@ func main () {
 	goals[1] = "Become a GO God!,"
 	goals = append(goals, "get paid,")
 	f.Println(goals)
+
 
 }
 

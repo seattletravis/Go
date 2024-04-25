@@ -31,16 +31,16 @@ func main () {
 	f.Println(goals)
 	// 7
 	mine := []Product{
-		Product{
-				"foo", 
-				"1", 
-				2.99,
-			}, 
-		Product{
-				"bar", 
-				"2", 
-				3.99,
-			},
+		{
+			"foo", 
+			"1", 
+			2.99,
+		}, 
+		{
+			"bar", 
+			"2", 
+			3.99,
+		},
 		}	
 	f.Println(mine)
 

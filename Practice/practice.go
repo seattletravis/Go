@@ -9,20 +9,21 @@ type Product struct {
 }
 
 func main () {
+	// 1
 	hobbies := [3]string{"landscaping", "cooking", "woodworking"}
 	f.Println(hobbies)
-
+	// 2
 	f.Println(hobbies[0])
 	f.Println(hobbies[1:])
-
+	// 3
 	mainHobbies := hobbies[:2]
 	f.Println(mainHobbies)
 
 	f.Println(cap(mainHobbies))
-
+ 	//4
 	mainHobbies = mainHobbies[1:3]
 	f.Println(mainHobbies)
-
+	//5
 	goals := []string{"learn GO,", "master GO,"}
 	goals[1] = "Become a GO God!,"
 	goals = append(goals, "get paid,")

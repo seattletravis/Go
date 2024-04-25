@@ -14,6 +14,11 @@ func main () {
 	f.Println(element2)
 	f.Println(hobbies[:2])
 
+	goals := []string{"learn GO,", "master GO,"}
+	goals[1] = "Become a GO God!,"
+	goals = append(goals, "get paid,")
+	f.Println(goals)
+
 }
 
 // Time to practice what you learned!

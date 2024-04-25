@@ -30,8 +30,23 @@ func main () {
 	goals = append(goals, "get paid,")
 	f.Println(goals)
 	// 7
-	mine := []Product{{"foo", "1", 2.99}, {"bar", "2", 3.99}}
+	mine := []Product{
+		Product{
+				"foo", 
+				"1", 
+				2.99,
+			}, 
+		Product{
+				"bar", 
+				"2", 
+				3.99,
+			},
+		}	
 	f.Println(mine)
+
+	mine = append(mine, Product{"buzz", "3", 89.99})
+	f.Println(mine)
+
 
 }
 

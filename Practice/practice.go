@@ -20,6 +20,9 @@ func main () {
 
 	f.Println(cap(mainHobbies))
 
+	mainHobbies = mainHobbies[1:3]
+	f.Println(mainHobbies)
+
 	goals := []string{"learn GO,", "master GO,"}
 	goals[1] = "Become a GO God!,"
 	goals = append(goals, "get paid,")

@@ -9,7 +9,7 @@ type Product struct {
 }
 
 func main () {
-	var hobbies = [3]string{"landscaping", "cooking", "woodworking"}
+	hobbies := [3]string{"landscaping", "cooking", "woodworking"}
 	f.Println(hobbies)
 
 	element1 := hobbies[0]

@@ -20,15 +20,18 @@ func main () {
 	f.Println(mainHobbies)
 
 	f.Println(cap(mainHobbies))
- 	//4
+ 	// 4
 	mainHobbies = mainHobbies[1:3]
 	f.Println(mainHobbies)
-	//5
+	// 5
 	goals := []string{"learn GO,", "master GO,"}
+	// 6
 	goals[1] = "Become a GO God!,"
 	goals = append(goals, "get paid,")
 	f.Println(goals)
-
+	// 7
+	mine := []Product{{"foo", "1", 2.99}, {"bar", "2", 3.99}}
+	f.Println(mine)
 
 }
 

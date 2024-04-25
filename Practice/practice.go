@@ -8,6 +8,12 @@ func main () {
 	var hobbies = [3]string{"landscaping", "cooking", "woodworking"}
 	f.Println(hobbies)
 
+	element1 := hobbies[0]
+	f.Println(element1)
+	element2 := hobbies[1:]
+	f.Println(element2)
+	f.Println(hobbies[:2])
+
 }
 
 // Time to practice what you learned!

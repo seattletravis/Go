@@ -10,4 +10,5 @@ func main(){
 
 
 	f.Println(websites)
+	f.Println(websites["Amazon"])
 }

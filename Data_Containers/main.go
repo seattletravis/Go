@@ -11,7 +11,7 @@ func main() {
 
 	fmt.Println(userNames)
 
-	courseRatings := map[string]float64{}
+	courseRatings := make(map[string]float64, 10)
 
 	courseRatings["go"] = 4.7
 	courseRatings["react"] = 4.8

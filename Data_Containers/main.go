@@ -25,4 +25,7 @@ func main() {
 	courseRatings["react"] = 4.8
 	courseRatings["angular"] = 0.5
 
+
+	for
+
 }

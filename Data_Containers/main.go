@@ -24,8 +24,11 @@ func main() {
 	courseRatings["go"] = 4.7
 	courseRatings["react"] = 4.8
 	courseRatings["angular"] = 0.5
+	
+// fmt.Println(courseRatings)
+
+	courseRatings.output()
 
 
-	for
 
 }

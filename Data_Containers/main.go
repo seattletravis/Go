@@ -29,6 +29,10 @@ func main() {
 
 	// fmt.Println(courseRatings)
 
-	for index, value := range userNames {}
+	for index, value := range userNames {
+		fmt.Println("Index", index)
+		fmt.Println("Value", value)
+
+	}
 
 }

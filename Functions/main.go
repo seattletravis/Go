@@ -4,6 +4,9 @@ import "fmt"
 
 type transformFn func(int) int
 
+// example of complex function type
+// type anotherFm func(int, []string, map[string][]int) ([]int, string)
+
 func main() {
 	numbers := []int{1, 2, 3, 4}
 	doubled := transformNumbers(&numbers, double)

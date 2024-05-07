@@ -20,3 +20,7 @@ func doubleNumbers(numbers *[]int) []int {
 func double(number int) int {
 	return number * 2
 }
+
+func triple(number int) int {
+	return number * 3
+}

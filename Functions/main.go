@@ -6,7 +6,7 @@ func main() {
 	numbers := []int{1, 2, 3}
 
 	transformed := transformNumbers(&numbers, func(number int) int { 
-		return number * 2 
+		return number * 4 
 	})
 
 	fmt.Println(transformed)

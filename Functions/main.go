@@ -15,11 +15,11 @@ func main() {
 	doubled := transformNumbers(&numbers, double)
 	tripled := transformNumbers(&numbers, triple)
 
+	fmt.Println(transformed)
 	fmt.Println(doubled)
 	fmt.Println(tripled)
 
 
-	fmt.Println(transformed)
 }
 
 func transformNumbers(numbers *[]int, transform func(int) int) []int {
@@ -35,6 +35,6 @@ func transformNumbers(numbers *[]int, transform func(int) int) []int {
 func createTransformer(factor int) func(int) int {
 	return func(number int) int {
 		return number * factor
-
 	}
 }
+

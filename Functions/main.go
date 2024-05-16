@@ -6,9 +6,9 @@ func main() {
 
 	numbers := []int{1, 2, 3, 5, 4, 5, 6}
 
-	summary := sumup(numbers)
+	sum := sumup(numbers)
 
-	fmt.Println(summary)
+	fmt.Println(sum)
 
 }
 

@@ -11,6 +11,9 @@ func main() {
 	sumVariatic := sumupVariatic(1, 2, 3)
 	fmt.Println(sumVariatic)
 
+	sumCallVariaticWithSlice := sumupVariatic(numbers...)
+	fmt.Println(sumCallVariaticWithSlice)
+
 }
 
 // function that takes array of ints

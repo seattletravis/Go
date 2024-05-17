@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	prices := []float64{10, 20, 30}
 	taxRate := []float64{0, 0.7, 0.1, 0.15}
@@ -13,4 +15,6 @@ func main() {
 		}
 		result[taxRate] = taxIncludedPrices
 	}
+
+	fmt.Println(result)
 }

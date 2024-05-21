@@ -1,6 +1,7 @@
 package prices
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 )
@@ -15,8 +16,12 @@ func (job TaxIncludedPriceJob) LoadData() {
 	file, err := os.Open("prices.txt")
 
 	if err != nil {
-		
+		fmt.Println("Could not open file")
+		fmt.Println(err)
+		return
 	}
+
+	bufio.
 }
 
 func (job TaxIncludedPriceJob) Process() {

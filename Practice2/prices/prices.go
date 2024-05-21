@@ -12,7 +12,11 @@ type TaxIncludedPriceJob struct {
 }
 
 func (job TaxIncludedPriceJob) LoadData() {
-	os.Open(prices.txt)
+	file, err := os.Open("prices.txt")
+
+	if err != nil {
+		
+	}
 }
 
 func (job TaxIncludedPriceJob) Process() {

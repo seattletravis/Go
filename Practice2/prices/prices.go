@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 type TaxIncludedPriceJob struct {
@@ -12,7 +13,7 @@ type TaxIncludedPriceJob struct {
 	TaxIncludedPrices map[string]float64
 }
 
-func (job TaxIncludedPriceJob) LoadData() {
+func (job *TaxIncludedPriceJob) LoadData() {
 	file, err := os.Open("prices.txt")
 
 	if err != nil {
@@ -38,8 +39,21 @@ func (job TaxIncludedPriceJob) LoadData() {
 		return
 	}
 
-	fmt.Println(lines)
+	prices := make([]float64, len(lines))
 
+	for lineIndex, line := range lines {
+		floatPrice, err := strconv.ParseFloat(line, 64)
+		if err != nil {
+			fmt.Println("Could not parse data to float64.")
+			fmt.Println(err)
+			file.Close()
+			return
+		}
+	
+		prices[lineIndex] = floatPrice
+	}
+
+	job.InputPrices = prices
 }
 
 func (job TaxIncludedPriceJob) Process() {

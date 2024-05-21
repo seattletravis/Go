@@ -1,11 +1,18 @@
 package prices
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 type TaxIncludedPriceJob struct {
 	TaxRate           float64
 	InputPrices       []float64
 	TaxIncludedPrices map[string]float64
+}
+
+func (job TaxIncludedPriceJob) LoadData() {
+
 }
 
 func (job TaxIncludedPriceJob) Process() {

@@ -1,20 +1,23 @@
 package conversion
 
 import (
-	"fmt"
+	"errors"
 	"strconv"
 )
 
 func StringsToFloat(strings []string) ([]float64, error) {
+	var floats []float64
+
 	for stringIndex, stringVal := range strings {
-		floatPrice, err := strconv.ParseFloat(stringVal, 64)
+		floatVal, err := strconv.ParseFloat(stringVal, 64)
+
 		if err != nil {
-			fmt.Println("Could not parse data to float64.")
-			fmt.Println(err)
-			file.Close()
-			return
+
+			return nil, errors.New("Failed to convert string to float.")
 		}
 
-		prices[lineIndex] = floatPrice
+		floats = append(floats, floatVal)
 	}
+
+	return floats, nil
 }

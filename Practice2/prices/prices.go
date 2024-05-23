@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 
 	"example.com/price-calculator/conversion"
 )
@@ -43,16 +42,12 @@ func (job *TaxIncludedPriceJob) LoadData() {
 
 	prices, err := conversion.StringsToFloat(lines)
 
-		if err != nil {
-			fmt.Println("Could not parse data to float64.")
-			fmt.Println(err)
-			file.Close()
-			return
-		}
-	
-		prices[lineIndex] = floatPrice
+	if err != nil {
+		fmt.Println(err)
+		file.Close()
+		return
 	}
-
+	
 	job.InputPrices = prices
 }
 
